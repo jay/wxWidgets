@@ -8,6 +8,8 @@
     </wxCfg>
     <wxVendor>custom</wxVendor>
   </PropertyGroup>
+  <!-- Allow user's local property file to override properties defined above -->
+  <Import Condition="Exists('wx_vc10_local.props')" Project="wx_vc10_local.props"/>
   <PropertyGroup Label="UserMacros" Condition="'$(Platform)'=='Win32'">
     <wxArchSuffix>
     </wxArchSuffix>
